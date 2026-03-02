@@ -1,16 +1,22 @@
+"use client";
+
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Hero } from "@/components/Hero";
+import { TechStack } from "@/components/TechStack";
+import { ScrollReveal } from "@/components/ScrollReveal";
 
 export default function Home() {
   return (
     <>
       <Hero />
+      <TechStack />
 
       <section id="about" className="border-border border-t py-20">
         <div className="container max-w-2xl">
-          <h2 className="mb-6 text-2xl font-semibold text-white">About</h2>
-          <p className="leading-relaxed text-white/80">
+          <ScrollReveal y={36} duration={1.4} start="top 85%">
+            <h2 className="mb-6 text-2xl font-semibold text-white">About</h2>
+            <p className="leading-relaxed text-white/80">
             I&apos;m a developer who loves clean code and great UX. This
             portfolio is built with Next.js, shadcn/ui, and animated components
             from React Bits. You can drop in any React Bits component from{" "}
@@ -25,12 +31,14 @@ export default function Home() {
             — copy the code, install dependencies (e.g. GSAP), and customize to
             fit your style.
           </p>
+          </ScrollReveal>
         </div>
       </section>
 
       <section id="projects" className="border-border border-t py-20">
         <div className="container">
-          <h2 className="mb-10 text-2xl font-semibold text-white">Projects</h2>
+          <ScrollReveal y={36} duration={1.4} start="top 85%">
+            <h2 className="mb-10 text-2xl font-semibold text-white">Projects</h2>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {[
               {
@@ -63,18 +71,21 @@ export default function Home() {
               </article>
             ))}
           </div>
+          </ScrollReveal>
         </div>
       </section>
 
       <section id="contact" className="border-border border-t py-20">
         <div className="container max-w-xl text-center">
-          <h2 className="mb-4 text-2xl font-semibold text-white">Get in touch</h2>
+          <ScrollReveal y={36} duration={1.4} start="top 85%">
+            <h2 className="mb-4 text-2xl font-semibold text-white">Get in touch</h2>
           <p className="mb-8 text-white/80">
             Have a project in mind? I&apos;d love to hear from you.
           </p>
           <Button size="lg" className="cursor-target bg-white text-black hover:bg-white/90" asChild>
             <a href="mailto:hello@example.com">hello@example.com</a>
           </Button>
+          </ScrollReveal>
         </div>
       </section>
     </>
