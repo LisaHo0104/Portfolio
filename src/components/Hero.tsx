@@ -89,8 +89,8 @@ function LinkedInIcon() {
 
 export function Hero() {
   return (
-    <section className="relative min-h-[90vh] px-4 py-20 md:px-8">
-      <div className="container mx-auto flex max-w-6xl flex-col items-center gap-12 pt-8 md:pt-16 lg:flex-row lg:items-center lg:justify-between lg:gap-16">
+    <section className="relative min-h-[90vh] px-4 py-12 md:px-8 md:py-16">
+      <div className="container mx-auto flex max-w-6xl flex-col items-center gap-12 pt-0 md:pt-4 lg:flex-row lg:items-center lg:justify-between lg:gap-16">
         {/* Left: intro text */}
         <div className="flex max-w-3xl flex-1 flex-col">
           <div className="mb-8 flex items-center gap-2">
@@ -124,7 +124,8 @@ export function Hero() {
 
           <p className="mb-10 max-w-xl text-base leading-relaxed text-white/80 md:text-lg">
             Creating precise, minimalist, and high-performance digital solutions.
-            Specializing in modern web development with an aesthetic touch.
+            Specializing in modern web development with an aesthetic touch. CTF
+            player specializing in OSINT, Web, and Cryptography challenges.
           </p>
 
           <div className="flex flex-wrap gap-4">
