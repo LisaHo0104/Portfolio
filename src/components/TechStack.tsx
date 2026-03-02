@@ -17,6 +17,7 @@ const TECH_LOGOS_ROW1 = [
 // Lower row: backend / tools / other
 const TECH_LOGOS_ROW2 = [
   { name: "Node.js", src: "https://cdn.simpleicons.org/nodedotjs/ffffff", alt: "Node.js", href: "https://nodejs.org" },
+  { name: "PHP", src: "https://cdn.simpleicons.org/php/ffffff", alt: "PHP", href: "https://www.php.net" },
   { name: "Python", src: "https://cdn.simpleicons.org/python/ffffff", alt: "Python", href: "https://www.python.org" },
   { name: "PostgreSQL", src: "https://cdn.simpleicons.org/postgresql/ffffff", alt: "PostgreSQL", href: "https://www.postgresql.org" },
   { name: "Supabase", src: "https://cdn.simpleicons.org/supabase/ffffff", alt: "Supabase", href: "https://supabase.com" },
