@@ -17,7 +17,7 @@ export function Footer() {
         </p>
         <div className="flex gap-6">
           <Link
-            href="https://github.com"
+            href="https://github.com/LisaHo0104"
             target="_blank"
             rel="noopener noreferrer"
             className="cursor-target text-sm text-white/60 hover:text-white"
@@ -25,7 +25,7 @@ export function Footer() {
             GitHub
           </Link>
           <Link
-            href="https://linkedin.com"
+            href="https://linkedin.com/in/lisa-ho-a5a917373"
             target="_blank"
             rel="noopener noreferrer"
             className="cursor-target text-sm text-white/60 hover:text-white"

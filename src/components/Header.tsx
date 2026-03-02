@@ -8,7 +8,7 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-black/95 backdrop-blur supports-[backdrop-filter]:bg-black/80">
       <div className="container flex h-14 items-center justify-between">
         <Link href="/" className="cursor-target font-semibold text-white">
-          Lisa Ho
+          Ho Le Nhu Ngoc (Lisa)
         </Link>
         <nav className="flex items-center gap-4">
           <Link
