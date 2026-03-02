@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import TextType from "@/components/TextType";
+import ProfileCard from "@/components/ProfileCard";
 
 function DownloadIcon() {
   return (
@@ -89,89 +90,103 @@ function LinkedInIcon() {
 export function Hero() {
   return (
     <section className="relative min-h-[90vh] px-4 py-20 md:px-8">
-      <div className="container mx-auto flex max-w-5xl flex-col justify-center pt-8 md:pt-16">
-        {/* Available for work tag */}
-        <div className="mb-8 flex items-center gap-2">
-          <span className="relative flex h-2 w-2">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-white opacity-40" />
-            <span className="relative inline-flex h-2 w-2 rounded-full bg-white" />
-          </span>
-          <span className="rounded-full border border-white/30 bg-black px-3 py-1 text-xs font-medium uppercase tracking-wider text-white">
-            Available for work
-          </span>
-        </div>
+      <div className="container mx-auto flex max-w-6xl flex-col items-center gap-12 pt-8 md:pt-16 lg:flex-row lg:items-center lg:justify-between lg:gap-16">
+        {/* Left: intro text */}
+        <div className="flex max-w-3xl flex-1 flex-col">
+          <div className="mb-8 flex items-center gap-2">
+            <span className="flex items-center gap-2 rounded-full border border-white/20 bg-neutral-800 px-3 py-1 text-xs font-medium uppercase tracking-wider text-white">
+              <span className="inline-flex h-2 w-2 shrink-0 rounded-full bg-green-500" />
+              Available for work
+            </span>
+          </div>
 
-        {/* Hello, I'm */}
-        <p className="mb-1 text-lg text-white md:text-xl">Hello, I&apos;m</p>
+          <p className="mb-1 text-lg text-white md:text-xl">Hello, I&apos;m</p>
 
-        {/* Name with typing effect (React Bits TextType) */}
-        <h1 className="mb-2 text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
-          <TextType
-            text="Lisa Ho"
-            as="span"
-            typingSpeed={80}
-            initialDelay={400}
-            loop={false}
-            showCursor={true}
-            cursorCharacter="|"
-            cursorClassName="text-type-cursor-white"
-            className="text-white"
-            variableSpeed={undefined}
-            onSentenceComplete={undefined}
-          />
-        </h1>
+          <h1 className="mb-2 text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
+            <TextType
+              text="Ho Le Nhu Ngoc (Lisa)"
+              as="span"
+              typingSpeed={80}
+              initialDelay={400}
+              loop={false}
+              showCursor={true}
+              cursorCharacter="|"
+              cursorClassName="text-type-cursor-white"
+              className="text-white"
+              variableSpeed={undefined}
+              onSentenceComplete={undefined}
+            />
+          </h1>
 
-        {/* Role */}
-        <p className="mb-6 text-xl text-white/90 md:text-2xl">
-          Fullstack Developer
-        </p>
+          <p className="mb-6 text-xl text-white/90 md:text-2xl">
+            Full-Stack Developer | CTF Player
+          </p>
 
-        {/* Bio */}
-        <p className="mb-10 max-w-xl text-base leading-relaxed text-white/80 md:text-lg">
-          Creating precise, minimalist, and high-performance digital solutions.
-          Specializing in modern web development with an aesthetic touch.
-        </p>
+          <p className="mb-10 max-w-xl text-base leading-relaxed text-white/80 md:text-lg">
+            Creating precise, minimalist, and high-performance digital solutions.
+            Specializing in modern web development with an aesthetic touch.
+          </p>
 
-        {/* CTAs */}
-        <div className="flex flex-wrap gap-4">
-          <Button
-            asChild
-            size="lg"
-            className="cursor-target bg-white text-black hover:bg-white/90"
-          >
-            <a href="/cv.pdf" download>
-              <DownloadIcon />
-              Download CV
+          <div className="flex flex-wrap gap-4">
+            <Button
+              asChild
+              size="lg"
+              className="cursor-target bg-white text-black hover:bg-white/90"
+            >
+              <a href="/cv.pdf" download="Ho Le Nhu Ngoc - Lisa Resume.pdf">
+                <DownloadIcon />
+                Download CV
+              </a>
+            </Button>
+            <Button asChild variant="outline" size="lg" className="cursor-target border-white text-white hover:bg-white/10 hover:text-white">
+              <Link href="/#projects">
+                Projects
+                <ArrowRightIcon />
+              </Link>
+            </Button>
+          </div>
+
+          <div className="mt-14 flex gap-6">
+            <a
+              href="https://github.com/LisaHo0104"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cursor-target text-white/60 transition-colors hover:text-white"
+              aria-label="GitHub"
+            >
+              <GitHubIcon />
             </a>
-          </Button>
-          <Button asChild variant="outline" size="lg" className="cursor-target border-white text-white hover:bg-white/10 hover:text-white">
-            <Link href="/#projects">
-              Projects
-              <ArrowRightIcon />
-            </Link>
-          </Button>
+            <a
+              href="https://linkedin.com/in/lisa-ho-a5a917373"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cursor-target text-white/60 transition-colors hover:text-white"
+              aria-label="LinkedIn"
+            >
+              <LinkedInIcon />
+            </a>
+          </div>
         </div>
 
-        {/* Socials */}
-        <div className="mt-14 flex gap-6">
-          <a
-            href="https://github.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="cursor-target text-white/60 transition-colors hover:text-white"
-            aria-label="GitHub"
-          >
-            <GitHubIcon />
-          </a>
-          <a
-            href="https://linkedin.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="cursor-target text-white/60 transition-colors hover:text-white"
-            aria-label="LinkedIn"
-          >
-            <LinkedInIcon />
-          </a>
+        {/* Right: Lanyard card with profile image (IMG_7637) */}
+        <div className="flex flex-shrink-0 justify-center lg:justify-end lg:ml-8 lg:pr-0">
+          <div className="w-full max-w-[480px] cursor-target">
+            <ProfileCard
+              avatarUrl="/profile.jpg"
+              miniAvatarUrl="/profile.jpg"
+              name="Lisa Ho"
+              title="Full-Stack Developer | CTF Player"
+              handle="lisaho"
+              status="Online"
+              contactText="Hire Me"
+              showUserInfo={true}
+              onContactClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+              className="w-full"
+              innerGradient={undefined}
+              behindGlowColor={undefined}
+              behindGlowSize={undefined}
+            />
+          </div>
         </div>
       </div>
     </section>

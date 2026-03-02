@@ -83,4 +83,23 @@
   .animate-cursor-blink {
     animation: cursor-blink 1s step-end infinite;
   }
+
+  /* Portfolio card — glowing blue/purple border */
+  .portfolio-card {
+    box-shadow:
+      0 0 0 1px rgba(147, 197, 253, 0.25),
+      0 0 20px rgba(147, 197, 253, 0.35),
+      0 0 40px rgba(192, 132, 252, 0.2);
+  }
+
+  .portfolio-card:hover {
+    box-shadow:
+      0 0 0 1px rgba(147, 197, 253, 0.4),
+      0 0 28px rgba(147, 197, 253, 0.45),
+      0 0 56px rgba(192, 132, 252, 0.3);
+  }
+
+  .portfolio-card-photo {
+    filter: saturate(0.85) contrast(1.05);
+  }
 }
