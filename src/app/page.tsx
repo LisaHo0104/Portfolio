@@ -1,10 +1,20 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Hero } from "@/components/Hero";
 import { TechStack } from "@/components/TechStack";
 import { ScrollReveal } from "@/components/ScrollReveal";
+
+const Lanyard = dynamic(() => import("@/components/Lanyard").then((m) => m.default), {
+  ssr: false,
+  loading: () => (
+    <div className="flex h-[720px] w-full min-h-[720px] max-w-[560px] items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-[#252525] to-[#0a0a0a] text-white/60 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.03),inset_0_-24px_32px_-8px_rgba(0,0,0,0.35)]">
+      Loading…
+    </div>
+  ),
+});
 
 export default function Home() {
   return (
@@ -12,32 +22,58 @@ export default function Home() {
       <Hero />
       <TechStack />
 
-      <section id="about" className="py-20">
-        <div className="container max-w-2xl">
-          <ScrollReveal y={36} duration={1.4} start="top 85%">
-            <h2 className="mb-6 text-2xl font-semibold text-white">About</h2>
-            <p className="leading-relaxed text-white/80">
-            I&apos;m a developer who loves clean code and great UX. This
-            portfolio is built with Next.js, shadcn/ui, and animated components
-            from React Bits. You can drop in any React Bits component from{" "}
-            <a
-              href="https://reactbits.dev"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="cursor-target text-white underline hover:no-underline"
-            >
-              reactbits.dev
-            </a>{" "}
-            — copy the code, install dependencies (e.g. GSAP), and customize to
-            fit your style.
-          </p>
-          </ScrollReveal>
+      <section id="about" className="pt-48 pb-20 pl-4 pr-2 md:pt-60 md:pb-28 md:pl-8 md:pr-4 lg:pl-8 lg:pr-4">
+        <div className="container mx-auto flex max-w-6xl flex-col items-center gap-10 md:flex-row md:items-start md:justify-between md:gap-20 lg:gap-24">
+          <div className="min-w-0 flex-1 md:max-w-2xl">
+            <ScrollReveal y={36} duration={1.4} start="top 85%" fadeOutOnScroll>
+              <h2 className="mb-1 text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">About Me</h2>
+              <div className="mb-6 h-1 w-32 rounded-l-full bg-gradient-to-r from-white/70 via-white/25 to-transparent sm:w-40 md:w-48" aria-hidden />
+              <p className="mb-10 text-lg leading-relaxed text-white/80 md:text-xl">
+              I&apos;m a developer who loves clean code and great UX. This
+              portfolio is built with Next.js, shadcn/ui, and animated components
+              from React Bits. You can drop in any React Bits component from{" "}
+              <a
+                href="https://reactbits.dev"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cursor-target text-white underline hover:no-underline"
+              >
+                reactbits.dev
+              </a>{" "}
+              — copy the code, install dependencies (e.g. GSAP), and customize to
+              fit your style.
+            </p>
+              <div className="flex flex-wrap gap-x-12 gap-y-6 sm:gap-x-16">
+                <div>
+                  <p className="text-2xl font-bold text-white md:text-3xl">3+</p>
+                  <p className="text-xs font-medium uppercase tracking-wider text-white/60">Years exp</p>
+                </div>
+                <div>
+                  <p className="text-2xl font-bold text-white md:text-3xl">5</p>
+                  <p className="text-xs font-medium uppercase tracking-wider text-white/60">Projects</p>
+                </div>
+                <div>
+                  <p className="text-2xl font-bold text-white md:text-3xl">20+</p>
+                  <p className="text-xs font-medium uppercase tracking-wider text-white/60">Clients</p>
+                </div>
+              </div>
+            </ScrollReveal>
+          </div>
+          <div className="ml-auto flex h-[720px] min-h-[720px] w-full shrink-0 flex-col md:ml-8 md:w-[520px] lg:ml-10 lg:w-[560px]">
+            <ScrollReveal y={24} duration={1} start="top 85%" fadeOutOnScroll>
+              <div
+                className="h-[720px] w-full flex-1 overflow-hidden rounded-2xl bg-gradient-to-br from-[#252525] to-[#0a0a0a] shadow-[inset_0_1px_0_0_rgba(255,255,255,0.03),inset_0_-24px_32px_-8px_rgba(0,0,0,0.35)]"
+              >
+                <Lanyard position={[0, 0, 12]} gravity={[0, -40, 0]} />
+              </div>
+            </ScrollReveal>
+          </div>
         </div>
       </section>
 
       <section id="projects" className="py-20">
         <div className="container">
-          <ScrollReveal y={36} duration={1.4} start="top 85%">
+          <ScrollReveal y={36} duration={1.4} start="top 85%" fadeOutOnScroll>
             <h2 className="mb-10 text-2xl font-semibold text-white">Projects</h2>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {[
@@ -77,7 +113,7 @@ export default function Home() {
 
       <section id="contact" className="px-4 py-12 md:px-8 md:py-16">
         <div className="container mx-auto max-w-6xl">
-          <ScrollReveal y={36} duration={1.4} start="top 85%">
+          <ScrollReveal y={36} duration={1.4} start="top 85%" fadeOutOnScroll>
             <div className="flex flex-col items-center gap-10 md:flex-row md:items-center md:justify-between md:gap-16">
               <div className="flex-1 text-center md:text-left">
                 <div

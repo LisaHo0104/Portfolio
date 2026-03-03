@@ -36,11 +36,11 @@ export function TechStack() {
   return (
     <section
       id="tech-stack"
-      className="border-border overflow-hidden pt-36 pb-20 md:pt-44 md:pb-28"
+      className="border-border overflow-hidden pt-36 pb-28 md:pt-44 md:pb-36"
       aria-label="Tech stack"
     >
       <div className="w-full">
-        <ScrollReveal y={40} duration={1.5} start="top 85%">
+        <ScrollReveal y={40} duration={1.5} start="top 85%" fadeOutOnScroll>
           <h2 className="mb-2 text-center text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
             Tech Stack
           </h2>
@@ -50,7 +50,7 @@ export function TechStack() {
           </p>
         </ScrollReveal>
           <div className="flex w-full flex-col gap-6">
-          <ScrollReveal y={28} duration={1.6} delay={0.2} start="top 88%">
+          <ScrollReveal y={28} duration={1.6} delay={0.2} start="top 88%" fadeOutOnScroll>
           <div className="w-full">
             <LogoLoop
               logos={logosRow1}
@@ -65,7 +65,7 @@ export function TechStack() {
             />
           </div>
           </ScrollReveal>
-          <ScrollReveal y={28} duration={1.6} delay={0.35} start="top 88%">
+          <ScrollReveal y={28} duration={1.6} delay={0.35} start="top 88%" fadeOutOnScroll>
           <div className="w-full">
             <LogoLoop
               logos={logosRow2}
